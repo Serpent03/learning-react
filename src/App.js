@@ -1,21 +1,39 @@
+import { useState } from 'react';
 import './App.css';
+
+function CountSection() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(new Date().getTime());
+  }
+
+  return (
+    <div>
+      <Button callFunc={handleClick} callCount={count}/>
+      <Button callFunc={handleClick} callCount={count}/>
+    </div>
+  );
+
+}
+
+function Button({callFunc, callCount}) {
+  return (
+    <div>
+      <button class="btn" onClick={callFunc}>Button</button>
+      <span class="text">
+        Times called: {callCount}
+      </span>
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Button state:
+        <CountSection />
       </header>
     </div>
   );
