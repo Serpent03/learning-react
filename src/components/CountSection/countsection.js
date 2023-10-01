@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from './button';
+import Button from '../Button/button.js'
 
 function CountSection() {
   const [count, setCount] = useState(0);

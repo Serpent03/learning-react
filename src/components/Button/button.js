@@ -1,4 +1,6 @@
-function Button({callFunc, callCount}) {
+import './button.css';
+
+const Button = ({callFunc, callCount}) => {
   return (
     <div>
       <button class="btn" onClick={callFunc}>Button</button>
