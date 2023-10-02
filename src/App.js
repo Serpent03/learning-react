@@ -27,7 +27,7 @@ function App() {
         ></Marker>
         <Marker 
           position={[30.80, 76.89]}
-          icon={counters.blufor_inf_bat}
+          icon={counters.blufor_mech_bat}
         ></Marker>
 
       </MapContainer>
